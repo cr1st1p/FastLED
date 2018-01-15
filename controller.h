@@ -101,7 +101,7 @@ public:
     CLEDController *next() { return m_pNext; }
 
 	/// set the default array of leds to be used by this controller
-    CLEDController & setLeds(CRGB *data, int nLeds) {
+    virtual CLEDController & setLeds(CRGB *data, int nLeds) {
         m_Data = data;
         m_nLeds = nLeds;
         return *this;

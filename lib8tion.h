@@ -3,6 +3,7 @@
 
 #include "FastLED.h"
 
+
 #ifndef __INC_LED_SYSDEFS_H
 #error WTH?  led_sysdefs needs to be included first
 #endif
@@ -172,7 +173,6 @@ Lib8tion is pronounced like 'libation': lie-BAY-shun
 */
 
 
-
 #include <stdint.h>
 
 #define LIB8STATIC __attribute__ ((unused)) static inline
@@ -298,6 +298,29 @@ Lib8tion is pronounced like 'libation': lie-BAY-shun
 #define AVG15_C 1
 #define BLEND8_C 1
 
+// encompass incomplete checks on these, even if we declared we want C versions
+#define SCALE8_AVRASM 0
+#define SCALE16BY8_AVRASM 0
+#define SCALE16_AVRASM 0
+#define CLEANUP_R1_AVRASM 0
+#define QADD8_AVRASM 0
+#define QADD8_AVRASM 0
+#define QADD7_AVRASM 0
+#define QADD7_ARM_DSP_ASM 0
+#define QADD8_ARM_DSP_ASM 0
+#define QSUB8_AVRASM 0
+#define ADD8_AVRASM 0
+#define SUB8_AVRASM 0
+#define AVG8_AVRASM 0
+#define AVG16_AVRASM 0
+#define AVG7_AVRASM 0
+#define AVG15_AVRASM 0
+#define MUL8_AVRASM 0
+#define QMUL8_AVRASM 0
+#define ABS8_AVRASM 0
+#define BLEND8_AVRASM 0
+#define EASE8_AVRASM 0
+
 #endif
 
 ///@defgroup lib8tion Fast math functions
@@ -333,6 +356,7 @@ Lib8tion is pronounced like 'libation': lie-BAY-shun
 
 /// ANSI unsigned short _Fract.  range is 0 to 0.99609375
 ///                 in steps of 0.00390625
+
 typedef uint8_t   fract8;   ///< ANSI: unsigned short _Fract
 
 ///  ANSI: signed short _Fract.  range is -0.9921875 to 0.9921875
